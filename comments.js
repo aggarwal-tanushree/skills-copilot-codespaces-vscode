@@ -1,6 +1,11 @@
-// create web server
-// 1. import http module
-const http = require('http');
-const fs = require('fs');
-const url = require('url');
-const qs = require('querystring');
+
+// Create Web Server
+const express = require('express');
+
+// Create Router
+const router = express.Router();
+
+router.get('/comments', (req, res) => {
+    res.send('GET: /comments');
+}   
+);
